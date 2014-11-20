@@ -95,4 +95,16 @@ function onMarkerClick () {
 	infoWin.open(map, this);
 }
 
+$.getJSON('http://data.seattle.gov/resource/65fc-btcc.json')
+	.done(function(data) {
+		//success: data contains parsed JavaScript data
+		console.log(data);
+	})
+	.fail(function(error) {
+		//error contains error information
+	})
+	.always(function() {
+		//just like finally from Angular
+		//called on either success or error cases
+	})
 
